@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Discipline Tracker App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    section {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-top: 10px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    button {
+      margin: 10px 5px 0 0;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #saveBtn { background-color: #28a745; color: white; }
+    #resetBtn { background-color: #dc3545; color: white; }
+  </style>
+</head>
+<body>
+  <h1>Daily Discipline Tracker App</h1>  <form id="trackerForm">
+    <section>
+      <h2>1. Morning Routine</h2>
+      <label><input type="checkbox" name="morning"> Woke up on time</label>
+      <label><input type="checkbox" name="morning"> Gym workout completed</label>
+      <label><input type="checkbox" name="morning"> Cold shower or reset</label>
+    </section><section>
+  <h2>2. Learning Goals</h2>
+  <label><input type="checkbox" name="learning"> 1st learning block (1hr web dev)</label>
+  <label><input type="checkbox" name="learning"> Break taken</label>
+  <label><input type="checkbox" name="learning"> 2nd learning block (1hr web dev)</label>
+  <label><input type="checkbox" name="learning"> Practiced project/review</label>
+</section>
+
+<section>
+  <h2>3. Physical & Mental Check</h2>
+  <label><input type="checkbox" name="check"> Ate healthy meals</label>
+  <label><input type="checkbox" name="check"> Drank 2L of water</label>
+  <label><input type="checkbox" name="check"> Managed urges</label>
+  <label><input type="checkbox" name="check"> Avoided digital triggers</label>
+</section>
+
+<section>
+  <h2>4. Evening Reflection</h2>
+  <textarea name="reflection1" placeholder="1 thing you did well today..."></textarea>
+  <textarea name="reflection2" placeholder="1 area to improve tomorrow..."></textarea>
+  <textarea name="reflection3" placeholder="How your body felt after workout..."></textarea>
+  <textarea name="reflection4" placeholder="Urges? How did you overcome them?"></textarea>
+  <textarea name="reflection5" placeholder="Inspiring quote or thought..."></textarea>
+</section>
+
+<section>
+  <h2>Weekly Add-on</h2>
+  <textarea name="weekly1" placeholder="Celebrate your wins this week..."></textarea>
+  <textarea name="weekly2" placeholder="Consistency score (e.g., 5/7)..."></textarea>
+  <textarea name="weekly3" placeholder="Plan for next week..."></textarea>
+</section>
+
+<div style="text-align: center">
+  <button type="button" id="saveBtn">Save</button>
+  <button type="reset" id="resetBtn">Reset</button>
+</div>
+
+  </form>  <script>
+    document.getElementById('saveBtn').addEventListener('click', () => {
+      const formData = new FormData(document.getElementById('trackerForm'));
+      let summary = "Your entries:\n";
+      for (const [name, value] of formData.entries()) {
+        summary += `- ${name}: ${value}\n`;
+      }
+      alert(summary);
+    });
+  </script></body>
+</html><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Discipline Tracker App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    section {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-top: 10px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    button {
+      margin: 10px 5px 0 0;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #saveBtn { background-color: #28a745; color: white; }
+    #resetBtn { background-color: #dc3545; color: white; }
+  </style>
+</head>
+<body>
+  <h1>Daily Discipline Tracker App</h1>  <form id="trackerForm">
+    <section>
+      <h2>1. Morning Routine</h2>
+      <label><input type="checkbox" name="morning"> Woke up on time</label>
+      <label><input type="checkbox" name="morning"> Gym workout completed</label>
+      <label><input type="checkbox" name="morning"> Cold shower or reset</label>
+    </section><section>
+  <h2>2. Learning Goals</h2>
+  <label><input type="checkbox" name="learning"> 1st learning block (1hr web dev)</label>
+  <label><input type="checkbox" name="learning"> Break taken</label>
+  <label><input type="checkbox" name="learning"> 2nd learning block (1hr web dev)</label>
+  <label><input type="checkbox" name="learning"> Practiced project/review</label>
+</section>
+
+<section>
+  <h2>3. Physical & Mental Check</h2>
+  <label><input type="checkbox" name="check"> Ate healthy meals</label>
+  <label><input type="checkbox" name="check"> Drank 2L of water</label>
+  <label><input type="checkbox" name="check"> Managed urges</label>
+  <label><input type="checkbox" name="check"> Avoided digital triggers</label>
+</section>
+
+<section>
+  <h2>4. Evening Reflection</h2>
+  <textarea name="reflection1" placeholder="1 thing you did well today..."></textarea>
+  <textarea name="reflection2" placeholder="1 area to improve tomorrow..."></textarea>
+  <textarea name="reflection3" placeholder="How your body felt after workout..."></textarea>
+  <textarea name="reflection4" placeholder="Urges? How did you overcome them?"></textarea>
+  <textarea name="reflection5" placeholder="Inspiring quote or thought..."></textarea>
+</section>
+
+<section>
+  <h2>Weekly Add-on</h2>
+  <textarea name="weekly1" placeholder="Celebrate your wins this week..."></textarea>
+  <textarea name="weekly2" placeholder="Consistency score (e.g., 5/7)..."></textarea>
+  <textarea name="weekly3" placeholder="Plan for next week..."></textarea>
+</section>
+
+<div style="text-align: center">
+  <button type="button" id="saveBtn">Save</button>
+  <button type="reset" id="resetBtn">Reset</button>
+</div>
+
+  </form>  <script>
+    document.getElementById('saveBtn').addEventListener('click', () => {
+      const formData = new FormData(document.getElementById('trackerForm'));
+      let summary = "Your entries:\n";
+      for (const [name, value] of formData.entries()) {
+        summary += `- ${name}: ${value}\n`;
+      }
+      alert(summary);
+    });
+  </script></body>
+</html>
